@@ -1,0 +1,61 @@
+:root {
+  --primary: #f5913e;
+  --grey: #858694;
+  --lightdark: #d1d1d1;
+}
+
+.Cal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.calculate {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cal-btn {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: auto;
+}
+
+.cal-btn button {
+  border: 1px solid var(--lightdark);
+  height: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+  transition: 0.4s;
+}
+
+.display {
+  background-color: var(--primary);
+}
+
+.hero {
+  grid-column: span 2;
+}
+
+.span-btn {
+  text-align: right;
+  margin: 40px 0 0 0;
+  font-size: 45px;
+}
+
+h1 {
+  margin: 0;
+  text-align: right;
+  width: 320px;
+  height: 40px;
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: var(--grey);
+}
