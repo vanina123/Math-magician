@@ -1,32 +1,83 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './calculator.css';
-import Data from './script';
+import calculate from '../Logic/calculate';
 
 function Cal() {
+  const [state, setState] = useState({ total: 0, next: null, operation: null });
+  const creatEvents = (e) => {
+    const btnName = e.target.innerHTML;
+    const result = calculate(state, btnName);
+    setState(result);
+  };
+  const { total, operation, next } = state;
   return (
     <div className="Cal">
       <div className="calculate">
-        <Data />
+        <div className="span-btn">
+          <div className="even">
+            <h1>
+              {total}
+              {operation}
+              {next}
+            </h1>
+          </div>
+        </div>
         <section className="cal-btn">
-          <button type="button">AC</button>
-          <button type="button" className="operator">+/-</button>
-          <button type="button" className="digit">%</button>
-          <button type="button" className="display">&#247;</button>
-          <button type="button">7</button>
-          <button type="button">8</button>
-          <button type="button">9</button>
-          <button type="button" className="display">x</button>
-          <button type="button">4</button>
-          <button type="button">5</button>
-          <button type="button">6</button>
-          <button type="button" className="display">-</button>
-          <button type="button">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button type="button" className="display">+</button>
-          <button type="button" className="hero">0</button>
-          <button type="button">.</button>
-          <button type="button" className="display">= </button>
+          <button type="button" onClick={creatEvents}>AC</button>
+          <button type="button" className="operator" onClick={creatEvents}>
+            +/-
+          </button>
+          <button type="button" className="digit" onClick={creatEvents}>
+            %
+          </button>
+          <button type="button" className="display" onClick={creatEvents}>
+            +
+          </button>
+          <button type="button" onClick={creatEvents}>
+            7
+          </button>
+          <button type="button" onClick={creatEvents}>
+            8
+          </button>
+          <button type="button" onClick={creatEvents}>
+            9
+          </button>
+          <button type="button" className="display" onClick={creatEvents}>
+            -
+          </button>
+          <button type="button" onClick={creatEvents}>
+            4
+          </button>
+          <button type="button" onClick={creatEvents}>
+            5
+          </button>
+          <button type="button" onClick={creatEvents}>
+            6
+          </button>
+          <button type="button" className="display" onClick={creatEvents}>
+            x
+          </button>
+          <button type="button" onClick={creatEvents}>
+            1
+          </button>
+          <button type="button" onClick={creatEvents}>
+            2
+          </button>
+          <button type="button" onClick={creatEvents}>
+            3
+          </button>
+          <button type="button" className="display" onClick={creatEvents}>
+            ÷
+          </button>
+          <button type="button" className="hero" onClick={creatEvents}>
+            0
+          </button>
+          <button type="button" onClick={creatEvents}>
+            .
+          </button>
+          <button type="button" className="display" onClick={creatEvents}>
+            =
+          </button>
         </section>
       </div>
     </div>
