@@ -2,6 +2,8 @@
   --primary: #f5913e;
   --grey: #858694;
   --lightdark: #d1d1d1;
+  --blue: #00f;
+  --danger: #f00;
 }
 
 .Cal {
@@ -58,4 +60,16 @@ h1 {
   padding-top: 5px;
   padding-bottom: 5px;
   background-color: var(--grey);
+}
+
+.loading {
+  color: var(--blue);
+}
+
+.error {
+  color: var(--danger);
+}
+
+.quotes {
+  text-align: center;
 }
