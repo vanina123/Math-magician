@@ -1,0 +1,42 @@
+:root {
+  --primary: #f5913e;
+  --grey: #858694;
+  --lightdark: #d1d1d1;
+  --blue: #00f;
+  --danger: #f00;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+}
+
+.navtop {
+  background-color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.navhead {
+  font-size: 30px;
+  margin-bottom: -60px;
+  margin-top: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  justify-content: flex-end;
+  margin-bottom: -10px;
+}
+
+.menu {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--grey);
+  margin-top: 20px;
+}
+
+.menu:hover {
+  color: var(--blue);
+}

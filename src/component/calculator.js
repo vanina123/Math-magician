@@ -11,11 +11,13 @@ function Cal() {
   };
   const { total, operation, next } = state;
   return (
+
     <div className="Cal">
+      <h2 className="cal-math">Lets Do Some Maths</h2>
       <div className="calculate">
         <div className="span-btn">
           <div className="even">
-            <h1>
+            <h1 className="next-head">
               {total}
               {operation}
               {next}
